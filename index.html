@@ -303,28 +303,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hiddenElements = document.querySelectorAll('.hiddenu');
-    const hiddenElement = document.querySelectorAll('.hiddens');
-    const hiddensElement = document.querySelectorAll('.hiddenz');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    });
-    hiddenElements.forEach((element) => observer.observe(element));
-    hiddenElement.forEach((element) => observer.observe(element));
-    hiddensElement.forEach((element) => observer.observe(element));
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
